@@ -39,11 +39,11 @@ class OwnerController {
 
     private static final String VIEWS_OWNER_CREATE_OR_UPDATE_FORM = "owners/createOrUpdateOwnerForm";
     private final OwnerRepository owners;
-    private final ApplicationContext applicationContext;
+    private final PetRepository petRepository;
 
-    public OwnerController(OwnerRepository clinicService, ApplicationContext applicationContext) {
+    public OwnerController(OwnerRepository clinicService, PetRepository petRepository) {
         this.owners = clinicService;
-        this.applicationContext = applicationContext;
+        this.petRepository = petRepository;
     }
 
     @GetMapping("/bean")
